@@ -1,0 +1,19 @@
+요구사항: 
+단축된 url with 키 생성 알고리즘 
+원래의 url 
+리다이렉트 카운트
+with 테스트 코드
+
+구현
+1. 단축 URL 생성 api -> /shortenUrl, POST
+2. 단축 URL 리다이렉트 API -> /{shortenUrlKey}, GET
+3. 단축 URL 정보 조회 api -> /shortenUrl/{shortenUrlKey}, GET
+
+
+테스트)
+1. 통합 테스트(단축 url 생성 후 조회)
+2. 유닛 테스트 ( Url 자원 부족 예외 테스트)
+3. 컨트롤러 301 http code 및 Location header테스트 
+
+spring.mvc.static-path-pattern=/ui/**
+-> url 충돌 때문에 /ui 추가
